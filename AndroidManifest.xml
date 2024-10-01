@@ -1,0 +1,27 @@
+<!-- Required permissions -->
+<uses-permission android:name="android.permission.RECEIVE_SMS" />
+<uses-permission android:name="android.permission.SEND_SMS" />
+<uses-permission android:name="android.permission.READ_SMS" />
+<uses-permission android:name="android.permission.WRITE_SMS" />
+<uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- SMS_RECEIVED action to receive incoming messages -->
+<receiver android:name=".SmsReceiver">
+<intent-filter>
+    <action android:name="android.provider.Telephony.SMS_DELIVER" />
+</intent-filter>
+</receiver>
+
+    <!-- Set your activity to handle SMS intents -->
+<activity android:name=".MainActivity">
+<intent-filter>
+    <action android:name="android.intent.action.MAIN" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <category android:name="android.intent.category.LAUNCHER" />
+
+    <!-- Handle compose SMS action -->
+    <action android:name="android.intent.action.SENDTO" />
+    <data android:scheme="smsto" />
+    <data android:scheme="sms" />
+</intent-filter>
+</activity>
