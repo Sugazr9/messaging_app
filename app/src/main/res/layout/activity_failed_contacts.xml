@@ -1,0 +1,65 @@
+<!-- res/layout/activity_failed_contacts.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/header_failed_contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/failed_contacts_header"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:fontFamily="@font/bangers"
+        android:paddingBottom="5dp" />
+
+    <!-- RecyclerView to display failed contacts -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_failed_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/ques_failed_groups"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/failed_contacts_ques"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:fontFamily="@font/permanent_marker"
+        android:paddingBottom="5dp" />
+
+    <!-- Retry and Close Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btn_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/failed_contacts_retry"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/fredoka_standard"
+            android:layout_marginEnd="8dp"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/failed_contacts_close"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/fredoka_standard"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

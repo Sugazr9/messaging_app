@@ -1,0 +1,94 @@
+<!-- activity_message_detail.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Top Row: Custom Back Button and Message ID -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <!-- Custom Back Button -->
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/group_update_back"
+            android:fontFamily="@font/fredoka_standard"
+            android:layout_gravity="start" />
+
+        <!-- Message ID -->
+        <TextView
+            android:id="@+id/tv_message_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="@string/message_detail_id_default"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="textEnd"
+            android:fontFamily="@font/luckiest_guy"
+            android:layout_gravity="end|center_vertical"/>
+    </LinearLayout>
+
+    <!-- Message Content -->
+    <TextView
+        android:id="@+id/tv_message_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="@font/permanent_marker"
+        android:text="@string/message_detail_content" />
+
+    <!-- Time and Status Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <!-- Time of Message -->
+        <TextView
+            android:id="@+id/tv_message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message_detail_time"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:fontFamily="@font/fredoka_standard"
+            android:layout_gravity="start"/>
+
+        <!-- Message Status -->
+        <TextView
+            android:id="@+id/tv_message_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/message_detail_status_default"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_green_dark"
+            android:textAlignment="textEnd"
+            android:fontFamily="@font/fredoka_standard"
+            android:layout_gravity="end"/>
+    </LinearLayout>
+
+    <!-- RecyclerView for Contacts -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

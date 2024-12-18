@@ -1,0 +1,44 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Top toolbar with two rectangular buttons taking up 50% each -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/comic_toolbar_background">
+
+        <!-- Left button (Group) taking up 50% of width -->
+        <ImageButton
+            android:id="@+id/btn_group_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_group"
+            android:contentDescription="@string/group_view_icon"
+            android:padding="16dp"
+            android:scaleType="centerInside" />
+
+        <!-- Right button (History) taking up 50% of width -->
+        <ImageButton
+            android:id="@+id/btn_history_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorNeutral"
+            android:src="@drawable/ic_history"
+            android:contentDescription="@string/msg_history_view_icon"
+            android:padding="16dp"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+    <!-- FrameLayout to hold the dynamic content -->
+    <FrameLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

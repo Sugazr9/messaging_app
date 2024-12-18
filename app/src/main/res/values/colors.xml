@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#6200EE</color> //buttons, headers, or other key UI elements
+    <color name="colorPrimaryDark">#3700B3</color> //disabled or inactive states, or for depth on shadows and overlays
+    <color name="colorAccent">#03DAC5</color> //icons, interactive elements, or to add a refreshing pop to smaller details
+    <color name="colorConfirmation">#39FF14</color> //for confirmation
+    <color name="colorNeutral">#2F4F4F</color> //backgrounds, dividers, or cards
+    <color name="colorAlert">#FFA500</color> //for action buttons, warnings, progress, emphasis
+    <color name="colorMinor">#555555</color> //minor text and details
+    <color name="colorFailedRed">#D32F2F</color> //background alert
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="group_adapter_contact_count">
+        <item quantity="one">%d contact</item>
+        <item quantity="other">%d contacts</item>
+    </plurals>
+    <plurals name="message_item_contact_num">
+        <item quantity="one">Sent to %d contact</item>
+        <item quantity="other">Sent to %d contacts</item>
+    </plurals>
+</resources>

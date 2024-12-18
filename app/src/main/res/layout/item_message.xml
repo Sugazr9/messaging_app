@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@drawable/comic_background_item">
+
+    <!-- Row for Message Text and Timestamp -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="start" >
+
+        <!-- Message Text -->
+        <TextView
+            android:id="@+id/tv_message_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message_item_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/permanent_marker"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <!-- Row for Number of Contacts -->
+        <TextView
+            android:id="@+id/tv_message_contacts_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message_item_contact_num"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/luckiest_guy"
+            android:paddingTop="4dp" />
+
+    </LinearLayout>
+
+    <!-- Timestamp -->
+    <TextView
+        android:id="@+id/tv_message_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message_item_timestamp"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:fontFamily="@font/fredoka_standard"
+        android:layout_gravity="center_vertical" />
+
+</LinearLayout>

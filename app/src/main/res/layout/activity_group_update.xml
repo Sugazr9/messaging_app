@@ -1,0 +1,84 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <!-- Custom Back Button -->
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/group_update_back"
+            android:fontFamily="@font/fredoka_standard"
+            android:layout_gravity="start"
+            android:layout_marginBottom="0dp" />
+
+        <!-- Group Name Input -->
+        <EditText
+            android:id="@+id/et_group_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/group_update_group_name"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:padding="0dp"
+            android:layout_marginStart="20dp"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/permanent_marker"
+            tools:ignore="Autofill"
+            android:inputType="textCapSentences|textAutoCorrect" />
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/group_update_search"
+        android:padding="8dp"
+        android:background="@color/colorNeutral"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorMinor"
+        android:fontFamily="@font/fredoka_standard"
+        android:drawableStart="@drawable/ic_contacts"
+        tools:ignore="Autofill"
+        android:inputType="text" />
+
+    <!-- Contacts RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="2dp"
+        android:paddingBottom="6dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="6dp"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="true"
+        android:background="@drawable/comic_background_panel" />
+
+
+    <!-- Save Button to Save Group -->
+    <Button
+        android:id="@+id/btn_save_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/group_update_save"
+        android:fontFamily="@font/fredoka_standard"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

@@ -1,0 +1,23 @@
+<!-- res/drawable/ic_history.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Circle background for the clock -->
+    <path
+        android:fillColor="@color/colorNeutral"
+        android:fillAlpha="0.2"
+        android:pathData="M12,2C6.48,2 2,6.48 2,12s4.48,10 10,10 10,-4.48 10,-10 -4.48,-10 -10,-10z" />
+
+    <!-- Clock face and clock hand -->
+    <path
+        android:fillColor="@color/colorMinor"
+        android:pathData="M12,8c0.55,0 1,0.45 1,1v3l1.5,1.5c0.39,0.39 0.39,1.02 0,1.41 -0.39,0.39 -1.02,0.39 -1.41,0L11,13.41V9c0,-0.55 0.45,-1 1,-1z" />
+
+    <!-- Arrow circling around the clock -->
+    <path
+        android:fillColor="@color/colorMinor"
+        android:pathData="M12,2c5.52,0 10,4.48 10,10h-1.79c0,-4.54 -3.67,-8.21 -8.21,-8.21 -2.12,0 -4.07,0.8 -5.6,2.13L4,5v4h4L7.07,7.07C8.43,5.71 10.14,5 12,5c3.87,0 7,3.13 7,7 0,3.87 -3.13,7 -7,7 -3.32,0 -6.12,-2.31 -6.88,-5.37h-1.81c0.84,3.91 4.37,6.87 8.69,6.87 4.97,0 9,-4.03 9,-9 0,-4.97 -4.03,-9 -9,-9z"/>
+</vector>

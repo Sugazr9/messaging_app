@@ -1,0 +1,22 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- Gradient for depth -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="90"
+                android:startColor="@color/black"
+                android:endColor="#1A1A1A" /> <!-- Subtle gradient effect -->
+        </shape>
+    </item>
+
+    <!-- Optional Benday dot overlay -->
+    <item>
+        <bitmap
+            android:src="@drawable/your_transparent_image2_resize"
+            android:tileMode="repeat"
+            android:tint="#20555555"
+            android:gravity="fill"/>
+    </item>
+</layer-list>

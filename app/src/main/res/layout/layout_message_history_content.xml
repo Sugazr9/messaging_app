@@ -1,0 +1,26 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/comic_background_panel">
+
+    <!-- Header Title -->
+    <TextView
+        android:id="@+id/header_title_groups"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bangers"
+        android:paddingBottom="5dp"
+        android:text="@string/msg_history_view_header"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <!-- RecyclerView for Message History -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_message_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

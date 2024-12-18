@@ -1,0 +1,34 @@
+<!-- res/layout/group_edit_dialog.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="6dp"
+    android:gravity="center"
+    android:background="@drawable/comic_background_dialog">
+
+    <!-- Edit Button with Icon -->
+    <ImageButton
+        android:id="@+id/btn_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/group_edit_popup_edit"
+        android:padding="12dp" />
+
+    <!-- Add space between buttons -->
+    <Space
+        android:layout_width="16dp"
+        android:layout_height="wrap_content" />
+
+    <!-- Delete Button with Icon -->
+    <ImageButton
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/group_edit_popup_delete"
+        android:padding="12dp"/>
+</LinearLayout>

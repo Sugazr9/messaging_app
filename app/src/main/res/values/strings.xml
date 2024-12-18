@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Mass Messaging App</string>
+    <string name="group_view_icon">Group View Icon</string>
+    <string name="msg_history_view_icon">Message History View Icon</string>
+    <string name="group_view_header">Groups</string>
+    <string name="msg_history_view_header">Message History</string>
+    <string name="group_item_name">Group Name</string>
+    <string name="group_item_contact_num">Number of contacts</string>
+    <string name="add_group">Add Group</string>
+    <string name="send">Send message</string>
+    <string name="message_hint">Type message here…</string>
+    <string name="progress_bar_text">Sending Messages</string>
+    <string name="progress_bar_start_percent">0%</string>
+    <string name="progress_bar_update_percent">%d%%</string>
+    <string name="group_edit_popup_edit">Edit group</string>
+    <string name="group_edit_popup_delete">Delete group</string>
+    <string name="group_update_back">Back</string>
+    <string name="group_update_group_name">Group Name</string>
+    <string name="group_update_search">Search contacts</string>
+    <string name="group_update_save">Save Group</string>
+    <string name="contact_item_name">Contact Name (type)</string>
+    <string name="contact_item_number">1234567890</string>
+    <string name="contact_adapter_name">%1$s (%2$s)</string>
+    <string name="message_detail_id_default">Message ID: 12345</string>
+    <string name="message_detail_content">Message Content</string>
+    <string name="message_detail_time">Time: 12:45 PM</string>
+    <string name="message_detail_status_default">Status: Sent</string>
+    <string name="message_item_content">Message content</string>
+    <string name="message_item_contact_num">Sent to 5 contacts</string>
+    <string name="message_item_timestamp">Nov 3, 2024\n12:45 PM</string>
+    <string name="message_detail_status">Status: %1$s</string>
+    <string name="failed_contacts_header">Failed to Send to Some Contacts</string>
+    <string name="failed_contacts_ques">Would you like to retry sending to the failed contacts?</string>
+    <string name="failed_contacts_retry">Retry</string>
+    <string name="failed_contacts_close">Close</string>
+</resources>

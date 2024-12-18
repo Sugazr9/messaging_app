@@ -1,0 +1,77 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/comic_background_panel" >
+
+    <!-- Header Title -->
+    <TextView
+        android:id="@+id/header_title_groups"
+        android:layout_width="79dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bangers"
+        android:paddingBottom="5dp"
+        android:text="@string/group_view_header"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <!-- RecyclerView for Group List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_groups"
+        android:layout_width="match_parent"
+        android:background="@color/colorNeutral"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp" />
+
+    <!-- Add Button for Adding Groups -->
+    <Button
+        android:id="@+id/btn_add_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/add_group"
+        android:fontFamily="@font/fredoka_standard"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp" />
+
+    <!-- Message Input Area with Send Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- EditText for Message Input -->
+        <EditText
+            android:id="@+id/et_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColorHint="@color/colorMinor"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/fredoka_standard"
+            android:background="@color/colorNeutral"
+            android:hint="@string/message_hint"
+            android:padding="8dp"
+            android:minLines="1"
+            android:maxLines="5"
+            android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+            android:scrollHorizontally="false"
+            android:gravity="top|start"
+            tools:ignore="Autofill" />
+
+        <!-- Send Button -->
+        <ImageButton
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorNeutral"
+            android:src="@drawable/ic_send"
+            android:contentDescription="@string/send"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+</LinearLayout>
