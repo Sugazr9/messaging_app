@@ -16,6 +16,7 @@ import android.text.Html
 import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.FrameLayout
@@ -203,7 +204,8 @@ class MainActivity : Activity() {
         sendButton.setOnClickListener {
             val message = messageEditText.text.toString()
             if (selectedGroup != null && message.isNotBlank()) {
-                sendMessages(selectedGroup!!.contacts, message, true)
+                val randomContacts = selectedGroup!!.contacts.shuffled()
+                sendMessages(randomContacts, message, true)
                 messageEditText.text.clear()
             } else {
                 Toast.makeText(this, "Please select a group and enter a message.",
@@ -316,6 +318,7 @@ class MainActivity : Activity() {
         alertDialog.show()
         progressBar.max = contacts.size
         lockOrientation()
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         fun interpretMessage(msg: String, contactI: Int, contact: Contact) {
             val timedOut = messageStatusCounts[contactI] == STATUS_TIMED_OUT
@@ -376,6 +379,7 @@ class MainActivity : Activity() {
                         Toast.LENGTH_SHORT).show()
                 }
                 unlockOrientation()
+                window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
             }
         }
 
@@ -405,8 +409,11 @@ class MainActivity : Activity() {
                     runOnUiThread {
                         interpretMessage(result, index, contact)
                         if (messageStatusCounts[index] == 2) {
-                            timeoutHandler.removeCallbacks(timeoutRunnable)
-                            updateProgressBar()
+//                            timeoutHandler.removeCallbacks(timeoutRunnable)
+//                            Handler(Looper.getMainLooper()).postDelayed({
+//                                updateProgressBar()
+//                            }, 600000L)
+                             updateProgressBar()
                         }
                     }
                 }
@@ -471,7 +478,7 @@ class MainActivity : Activity() {
     }
 
     private fun saveGroups() {
-        val sharedPreferences = getSharedPreferences("MyAppPrefs", Context.MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         val gson = Gson()
         val json = gson.toJson(groupList)
@@ -483,7 +490,7 @@ class MainActivity : Activity() {
     private fun saveMessageHistory() {
         messageHistoryList.sortBy { it.timestamp }
         messageHistoryList.reverse()
-        val sharedPreferences = getSharedPreferences("MyAppPrefs", Context.MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         val gson = Gson()
         val json = gson.toJson(messageHistoryList)
@@ -492,7 +499,7 @@ class MainActivity : Activity() {
     }
 
     private fun loadGroups() {
-        val sharedPreferences = getSharedPreferences("MyAppPrefs", Context.MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
         val gson = Gson()
         val json = sharedPreferences.getString("groupList", null)
         val type = object : TypeToken<MutableList<Group>>() {}.type
@@ -506,7 +513,7 @@ class MainActivity : Activity() {
     }
 
     private fun loadMessageHistory() {
-        val sharedPreferences = getSharedPreferences("MyAppPrefs", Context.MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE)
         val gson = Gson()
         val json = sharedPreferences.getString("messageHistoryList", null)
         val type = object : TypeToken<MutableList<Message>>() {}.type
